@@ -1,0 +1,125 @@
+.logo {
+  @include font-rules (19px, 400, 120%);
+  text-align: center;
+  width: 82px;
+  height: 52px;
+  color: $white;
+  border: 1px solid $white;
+  border-radius: 2px;
+}
+
+.header {
+  background: $black;
+  backdrop-filter: blur(2px);
+  position: relative;
+  z-index: 20;
+
+  @include for-landscape-tablet {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  &__container {
+    @include for-landscape-tablet {
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__logo {
+    padding: 3.55px 4.75px;
+    margin: 14px 0;
+    position: relative;
+
+    @include for-landscape-tablet {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 120%;
+      border: none;
+      padding-top: 11.55px;
+    }
+
+    @include for-tablet {
+      padding-left: 0;
+      width: 50px;
+      height: 52px;
+    }
+
+    &:before {
+      content: '';
+      background: url('img/bamboo-logo.svg') no-repeat center;
+      width: 12px;
+      height: 21px;
+      position: absolute;
+      top: 24px;
+      left: 10px;
+
+      @include for-landscape-tablet {
+        background: url('img/bamboo-logo-for-640.svg') no-repeat center;
+        top: 20px;
+        left: 20px;
+      }
+
+      @include for-tablet {
+        left: 1px;
+      }
+    }
+  }
+
+  &__copyright {
+    color: $white;
+
+    &:hover {
+      @include hover-effect($orange, color 0.5s ease-in-out)
+    }
+
+    @include for-landscape-tablet {
+      display: none;
+    }
+  }
+}
+
+.nav {
+  @include flex-rules (row, center);
+  justify-content: space-between;
+  
+  &__wrap {
+    @include flex-rules (row, center);
+  }
+}
+
+
+.menu {
+  margin-left: 63px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 58px;
+
+    &_active {
+      color: $orange;
+    }
+    
+    &_inactive {
+      color: $white;
+      
+      &:hover {
+        @include hover-effect($orange, color 0.5s ease-in-out)
+      }
+    }
+
+    @include for-laptop {
+      margin-right: 48px;
+    }
+
+    @include for-landscape-tablet {
+      display: none;
+    }
+  }
+}
