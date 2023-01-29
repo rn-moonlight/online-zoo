@@ -1,0 +1,537 @@
+.main-photo {
+  background: url('img/main-photo.png') no-repeat center/ cover;
+  padding-bottom: 386px;
+
+  @include for-laptop {
+    background-position: -171px;
+    padding-bottom: 390px;
+  }
+
+  @include for-landscape-tablet {
+    margin-top: 34px;
+    padding-bottom: 335px;
+  }
+
+  @include for-tablet {
+    background: url('img/panda-donate-for-640.png') no-repeat center/ cover;
+  }
+
+  @include for-phone {
+    background: url('img/panda-donate-for-320.png') no-repeat center/cover;
+    padding-bottom: 187px;
+  }
+}
+
+.donate {
+  background: $orange-light-gradient;
+  padding-bottom: 181px;
+
+  @include for-laptop {
+    padding-bottom: 29px;
+  }
+
+  @include for-tablet {
+    padding-bottom: 46px;
+  }
+
+  @include for-phone {
+    padding-bottom: 21px;
+  }
+}
+
+.description {
+  &__title {
+    @include font-rules (36px, 400, 130%);
+    color: $white;
+    padding: 40px 0 9px;
+
+    @include for-laptop {
+      max-width: 778px;
+      padding-bottom: 29px;
+    }
+
+    @include for-landscape-tablet {
+      font-size: 24px;
+    }
+
+    @include for-tablet {
+      line-height: 120%;
+      padding: 30px 0 15px;
+    }
+
+    @include for-phone {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__text {
+    line-height: 140%;
+    color: $white;
+    margin-right: 10px;
+
+    @include for-tablet {
+      margin-right: 0;
+    }
+  }
+
+  &__text_bold {
+    font-weight: 500;
+  }
+
+  &__subtitle {
+    @include font-rules (36px, 400, 130%);
+    color: $orange;
+    margin: 45px 0 60px;
+
+    @include for-laptop {
+      margin-bottom: 41px;
+    }
+
+    @include for-tablet {
+      margin: 32px 0 30px;
+    }
+
+    @include for-phone-landscape {
+      font-size: 30px;
+    }
+
+    @include for-phone {
+      font-size: 24px;
+      margin: 23px 0 29px;
+    }
+  }
+}
+
+.block {
+  padding: 40px 92px 62px;
+  background: $background-white-light;
+  border-radius: 20px;
+  @include flex-rules (column, center);
+
+  @include for-laptop {
+    padding: 20px 47px 48px;
+  }
+
+  @include for-tablet {
+    padding: 30px 45px 33px;
+  }
+
+  @include for-phone {
+    padding: 21px 0 22px;
+  }
+
+  &__title {
+    @include font-rules (48px, 400, 120%);
+    text-align: center;
+    color: $orange;
+    padding-right: 14px;
+
+    @include for-tablet {
+      padding-right: 0;
+    }
+
+    @include for-phone-landscape {
+      font-size: 30px;
+    }
+
+    @include for-phone {
+      font-size: 24px;
+    }
+  }
+
+  &__text {
+    @include font-rules (24px, 400, 120%);
+    padding: 22px 133px 0 0;
+
+    @include for-laptop {
+      padding: 11px 0 0;
+    }
+
+    @include for-landscape-tablet {
+      text-align: center;
+    }
+
+    @include for-tablet {
+      padding: 21px 0 0;
+    }
+
+    @include for-phone-landscape {
+      font-size: 20px;
+    }
+
+    @include for-phone {
+      font-size: 16px;
+      line-height: 140%;
+      padding-top: 9px;
+    }
+  }
+
+  &__pets {
+    @include flex-rules (row, center);
+    margin: 60px 229px 46px 215px;
+
+    @include for-laptop {
+      margin: 60px 165px 45px 149px
+    }
+
+    @include for-landscape-tablet  {
+      margin: 50px -4px 38px -18px;
+    }
+
+    @include for-phone {
+      margin: 10px 0 -1px;
+    }
+  }
+
+  &__check {
+    margin-top: 26px;
+
+    @include for-tablet {
+      margin: 32px 0 0 -4px;
+    }
+
+    @include for-phone {
+      margin: 26px 0 0 -6px;
+    }
+  }
+
+  &__btn {
+    margin: 32px 0 31px 6px;
+
+    @include for-tablet {
+      margin: 31px 0 31px 2px;
+    }
+
+    @include for-phone {
+      margin: 29px 0 31px 0;
+    }
+  }
+
+  &__request {
+    padding-left: 5px;
+
+    @include for-tablet {
+      padding-left: 0;
+    }
+
+    @include for-phone {
+      letter-spacing: -0.0009em;
+    }
+  }
+}
+
+.pets {
+  &__wrap {
+    padding-top: 53px;
+
+    @include for-phone {
+      padding-top: 33px;
+    }
+  }
+
+  &__number {
+    @include font-rules (72px, 500, 80%);
+    text-align: center;
+    text-transform: uppercase;
+    color: $black;
+
+    @include for-phone-landscape {
+      font-size: 55px;
+    }
+
+    @include for-phone {
+      font-size: 41px;
+    }
+  }
+
+  &__text {
+    line-height: 140%;
+    text-align: center;
+    padding-top: 11px;
+
+    @include for-phone-landscape {
+      font-size: 14px;
+    }
+
+    @include for-phone {
+      font-size: 9px;
+      padding-top: 7px;
+    }
+  }
+
+  &__mult {
+    padding: 28px 64px 0 11px;
+
+    @include for-phone-landscape {
+      padding: 23px 36px 0 0;
+    }
+  }
+
+  &__img {
+    @include for-phone-landscape {
+      width: 160.15px;
+      height: 138.72px;
+    }
+  }
+}
+
+.amount {
+  &__subtitle {
+    line-height: 140%;
+    color: $black;
+    margin: 0 0 18px 4px;
+
+    @include for-laptop {
+      margin: 2px 0 17px 0;
+    }
+
+    @include for-tablet {
+      margin: 2px 0 7px 10px;
+    }
+
+    @include for-phone {
+      margin: 5px 0 0 0;
+    }
+  }
+
+  &__form {
+    background: $background-dark-gray;
+    border-radius: 2px;
+    width: 976px;
+    height: 27px;
+    position: relative;
+    margin: 8px 0 85px;
+    display: flex;
+
+    @include for-laptop {
+      width: 810px;
+    }
+
+    @include for-landscape-tablet {
+      margin-top: 7px;
+      width: 600px;
+    }
+
+    @include for-phone-landscape {
+      width: 380px;
+      height: 18px;
+      margin-bottom: 50px;
+    }
+
+    @include for-phone {
+      width: 300px;
+      height: 13.5px;
+      margin-top: 9px;
+      margin-bottom: 35px;
+    }
+  }
+
+  &__picker {
+    width: 915px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: $background-middle-gray;
+    @include flex-rules (row, center);
+    justify-content: space-between;
+
+    @include for-laptop {
+      width: 785px;
+    }
+
+    @include for-landscape-tablet {
+      width: 524px;
+    }
+
+    @include for-phone-landscape {
+      width: 330px;
+    }
+
+    @include for-phone {
+      width: 262px;
+    }
+  }
+}
+
+.radio {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: relative;
+  background: $yellow;
+  cursor: pointer;
+
+  &:first-child {
+    @include for-laptop {
+      display: none;
+    }
+  }
+
+  &:nth-child(-n+3) {
+    @include for-tablet {
+      display: none;
+    }
+  }
+
+  @include for-phone {
+    width: 6px;
+    height: 6px;
+  }
+
+  &__input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+
+  &_active .radio__text {
+    color: $orange;
+  }
+
+  &_active .radio__decor::before,
+  &_active .radio__decor::after {
+    border-color: $orange;
+  }
+
+  &__decor::before {
+    content: '';
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: border-color 0.3s;
+
+    @include for-phone {
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  &__decor::after {
+    content: '';
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: border-color 0.3s;
+
+    @include for-phone {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &__text {
+    @include font-rules (26px, 500, 140%);
+    position: absolute;
+    top: calc(100% + 20px);
+    left: 50%;
+    transform: translateX(-50%);
+    transition: color 0.3s;
+
+    @include for-phone-landscape {
+      font-size: 20px;
+    }
+
+    @include for-phone {
+      font-size: 13px;
+      top: calc(100% + 10px);
+    }
+  }
+}
+
+.reward {
+  &__input {
+    width: 268px;
+    height: 54px;
+    border: 1px solid $middle-gray;
+    border-radius: 2px;
+    background-color: transparent;
+    color: $middle-gray;
+    margin-top: 13px;
+    @include font-rules (19px, 400, 140%);
+    padding: 2px 0 2px 8px;
+    -moz-appearance: textfield;
+
+    @include for-tablet {
+      width: 180px;
+      height: 42px;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+  }
+}
+
+.block__reward-element {
+  position: relative;
+
+  &:after {
+    content: '$';
+    font-weight: 900;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    color: $middle-gray;
+  }
+}
+
+.checkbox {
+  &__input {
+    display: none;
+  }
+  
+  &__checkmark {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    margin: 0 31px 0 17px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background: transparent;
+      border: 1px solid $orange;
+      border-radius: 50%;
+      top: 50%;
+      left: -2px;
+      transform: translateY(-50%);
+      transition: background 0.3s ease;
+    }
+
+    &:after {
+      content: "";
+      width: 16px;
+      height: 16px;
+      border: 1px solid $orange;
+      background: $orange;
+      border-radius: 50%;
+      position: absolute;
+      left: -2px;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0;
+      transition: background 0.3s ease;
+    }
+  }
+
+}
+
+.checkbox__input:checked + .checkbox__checkmark::after {
+  opacity: 1;
+}

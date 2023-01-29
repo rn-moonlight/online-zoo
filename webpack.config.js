@@ -13,7 +13,7 @@ module.exports = {
   devtool,
 
   devServer: {
-    port: 3000,
+    // port: 3000,
     open: true,
     hot: true,
   },
@@ -22,12 +22,17 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
-    filename: '[name].[contenthash].js'
+    filename: '[name].js'
   },
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src', 'index.html'),
+      template: './src/index.html',
+      filename: 'index.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/donate.html',
+      filename: 'donate.html'
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
