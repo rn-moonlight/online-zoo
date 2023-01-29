@@ -1,0 +1,1021 @@
+.about {
+  background: url('img/Giant-Panda.png') no-repeat center bottom/ cover;
+  transition: background 0.3s;
+
+  @include for-laptop {
+    height: 584px;
+    background-position: center -79px;
+  }
+
+  @include for-tablet {
+    background: url('img/Giant-Panda-for-640.png') no-repeat center bottom/ cover;
+    height: 339px;
+    margin-top: 34px;
+  }
+
+  @include for-phone {
+    background: url('img/Giant-Panda-for-320.png') no-repeat center bottom/ cover;
+    height: 186.96px;
+  }
+
+  &__container {
+    @include flex-rules (column, flex-end);
+    padding-top: 86px;
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 465px;
+      height: 465px;
+      border-radius: 50%;
+      background: $orange-gradient;
+      position: absolute;
+      top: 12px;
+      right: 108px;
+
+      @include for-laptop {
+        width: 367px;
+        height: 367px;
+        top: -11px;
+        right: 147px;
+        z-index: 1;
+      }
+
+      @include for-landscape-tablet {
+        width: 237.6px;
+        height: 237.6px;
+        top: 10px;
+        right: 62px;
+      }
+
+      @include for-tablet {
+        right: 51px;
+      }
+
+      @include for-phone {
+        width: 119.09px;
+        height: 119.09px;
+        top: 22px;
+        right: 29px;
+      }
+    }
+
+    @include for-laptop {
+      padding-top: 44px;
+    }
+
+    @include for-phone-landscape {
+      padding-top: 41px;
+    }
+  }
+
+  &__title {
+    @include font-rules (6.625rem, 700, 75%);
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    width: 500px;
+    height: 400px;
+    z-index: 10;
+
+    & > span {
+      color: $yellow;
+    }
+
+    @include for-laptop {
+      height: 359px;
+      font-size: 85px;
+      padding-right: 11px;
+    }
+
+    @include for-landscape-tablet {
+      font-size: 54px;
+      line-height: 75%;
+      width: 255.64px;
+      height: 204.38px;
+      padding: 6px 13px 0 0 ;
+    }
+
+    @include for-tablet {
+      padding: 6px 0 0 8px;
+    }
+
+    @include for-phone {
+      width: 128px;
+      height: 102.44px;
+      font-size: 28px;
+      line-height: 75%;
+      padding: 0 3px 0 0;
+    }
+  }
+
+  &__btn {
+    margin: 60px 99px 100px 0;
+
+    @include for-laptop {
+      margin: 0 107px;
+    }
+
+    @include for-landscape-tablet {
+      margin: 55px 285px 0 0;
+    }
+
+    @include for-tablet {
+      margin: -3px 302px 0 0;
+    }
+
+    @include for-phone-landscape {
+      margin: 60px auto;
+    }
+
+    @include for-phone {
+      margin: 63px auto 0;
+    }
+  }
+}
+
+.backstage {
+  background: url('img/back-first.png') no-repeat right 15px;
+
+  @include for-laptop {
+    background: none;
+  }
+
+  @include for-tablet {
+    background: url('img/back-first-for-640.png') no-repeat right 15px;
+  }
+
+  @include for-phone-landscape {
+    margin-top: 38px;
+    background: url('img/back-first-for-320.png') no-repeat 100% top;
+  }
+
+  &__wrapper {
+    padding: 140px 0 155px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px, 1fr));
+
+    @include for-laptop {
+      padding: 21px 0 121px;
+    }
+
+    @include for-landscape-tablet {
+      padding: 0 0 58px;
+    }
+
+    @include for-tablet {
+      padding: 60px 0 58px;
+    }
+
+    @include for-phone-landscape {
+      padding: 0 0 17px;
+    }
+  }
+
+  &__image {
+    @include for-laptop {
+      margin-top: 8px;
+    }
+
+    @include for-landscape-tablet {
+      display: none;
+    }
+  }
+
+  &__desc {
+    margin-left: 115px;
+
+    @include for-laptop {
+      margin-left: 16px;
+    }
+
+    @include for-landscape-tablet {
+      margin: 0 115px 0 0;
+    }
+
+    @include for-phone-landscape {
+      margin: 67px 0 0;
+    }
+  }
+}
+
+.desc {
+  &__title {
+    @include font-rules (3rem, 400, 120%);
+    margin-bottom: 20px;
+
+    @include for-landscape-tablet {
+      margin-left: 4px;
+    }
+
+    @include for-phone-landscape {
+      font-size: 24px;
+      margin: 0 0 10px;
+    }
+  }
+
+  &__subtitle {
+    @include font-rules (1.5rem, 400, 120%);
+    margin: 55px 0 33px;
+
+    @include for-landscape-tablet {
+      margin: 32px 0 19px 4px;
+    }
+
+    @include for-phone {
+      margin: 21px 0 9px 1px;
+    }
+  }
+
+  &__text {
+    line-height: 130%;
+  }
+
+  &__explain {
+    line-height: 140%;
+  } 
+}
+
+.animals {
+  padding-bottom: 100px;
+  background: url('img/animals-back-first-flower.svg') no-repeat left bottom, url('img/animals-back-second-flower.svg') no-repeat right bottom;
+
+  @include for-laptop {
+    padding-bottom: 140px;
+    background: url('img/animals-back-first-flower-for-1000.svg') no-repeat left bottom, url('img/animals-back-second-flower-for-1000.svg') no-repeat right bottom;
+  }
+
+  @include for-landscape-tablet {
+    padding-bottom: 100px;
+    background: url('img/animals-back-first-flower-for-640.svg') no-repeat left bottom, url('img/animals-back-second-flower-for-640.svg') no-repeat right bottom;
+  }
+
+  @include for-phone {
+    padding-bottom: 61px;
+    background: url('img/animals-back-first-flower-for-320.svg') no-repeat left bottom, url('img/animals-back-second-flower-for-320.svg') no-repeat right bottom;
+  }
+
+  &__container {
+    @include flex-rules (column, center);
+    position: relative;
+  }
+
+  &__wrapper {
+    overflow: hidden;
+
+    @include for-phone-landscape {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__info {
+    width: 366px;
+    height: 426px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    outline: 1px solid $outline-orange-color;
+    display: flex;
+
+    &:hover > .animal__wrap {
+      transform: translateY(0);
+    }
+
+    @include for-laptop {
+      width: 294px;
+      height: 354px;
+      margin-bottom: 62px;
+    }
+
+    @include for-landscape-tablet {
+      width: 285px;
+      height: 332px;
+    }
+
+    &:nth-last-child(-n+2) {
+      @include for-tablet {
+        display: none;
+      }
+    }
+
+    @include for-phone-landscape {
+      margin-bottom: 0;
+    }
+  }
+
+  &__btn {
+    background: $orange;
+  }
+  
+  &__arrows {
+    @include for-phone-landscape {
+      display: none;
+    }
+  }
+}
+
+.slide {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2,1fr);
+  gap: 30px;
+  display: none;
+  margin: 20px 0 72px;
+
+  @include for-laptop {
+    margin: 19px 0;
+  }
+
+  @include for-tablet {
+    margin: 19px 0 0;
+  }
+
+  &.active {
+    display: grid;
+
+    @include for-landscape-tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include for-phone-landscape {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+}
+
+.animal {
+  animation: fade 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4
+  } 
+  to {
+    opacity: 1
+  }
+}
+
+.animal {
+  &__img {
+    width: 110%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  &__title {
+    @include font-rules (16px, 500, 140%);
+    text-transform: uppercase;
+    color: $black;
+  }
+  
+  &__text {
+    @include font-rules (15px, 300, 120%);
+    color: $black;
+  }
+  
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px 14px 16px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: $white;
+    opacity: 0.9;
+    transform: translateY(100%);
+    transition: transform 1s;
+  }
+
+  &__food {
+    width: 42px;
+    height: 40px;
+  }
+}
+
+
+.animals__arrows_left, 
+.animals__arrows_right {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: $orange-gradient;
+  position: absolute;
+  transition: 500ms;
+}
+
+.animals__arrows_left {
+  top: 424px;
+  left: -82px;
+
+  &:hover {
+    background: $hover-btn-color;
+  }
+
+  &:active {
+    background: $active-btn-color;
+  } 
+
+  @include for-laptop {
+    top: 40.7%;
+    left: 34.4%;
+  }
+
+  @include for-landscape-tablet {
+    top: 40.8%;
+    left: 37.1%;
+  }
+}
+
+.animals__arrows_right {
+  top: 424px;
+  right: -80px;
+
+  &:hover {
+    background: $hover-btn-color;
+  }
+
+  :active {
+    background: $active-btn-color;
+  }
+
+  @include for-laptop {
+    top: 40.7%;
+    right: 34.3%;
+  }
+
+  @include for-landscape-tablet {
+    top: 40.8%;
+    right: 37.1%;
+  }
+}
+
+.feed-friend {
+  background: $orange-light-gradient;
+  opacity: 0.9;
+  padding: 69px 0 100px;
+
+  @include for-laptop {
+    padding: 29px 0 50px;
+  }
+
+  @include for-landscape-tablet {
+    padding: 19px 0 29px;
+  }
+
+  @include for-tablet {
+    padding-bottom: 20px;
+  }
+
+  &__container {
+    background: $light-white;
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    padding-bottom: 59px;
+
+    @include for-laptop {
+      padding-bottom: 51px;
+    }
+
+    @include for-landscape-tablet {
+      max-width: 640px;
+    }
+
+    @include for-tablet {
+      padding-bottom: 61px;
+    }
+
+    @include for-phone-landscape {
+      padding-bottom: 40px;
+    }
+  }
+
+  &__desc {
+    padding: 41px 0 0 99px;
+
+    @include for-laptop {
+      padding: 29px 0 0 49px;
+    }
+
+    @include for-landscape-tablet {
+      padding: 3px 0 0 20px;
+    }
+  }
+  
+  &__title {
+    @include font-rules (3rem, 400, 120%);
+    color: $orange;
+    margin: 0px 250px 30px;
+
+    @include for-laptop {
+      margin: 0 190px;
+    }
+    
+    @include for-landscape-tablet {
+      @include font-rules (42px, 400, 120%);
+      margin: 7px 0 0 98px;
+    }
+
+    @include for-phone-landscape {
+      font-size: 30px;
+    }
+    
+    @include for-phone {
+      font-size: 24px;
+      margin: 19px 0 0 13px;
+    }
+  }
+  
+  &__subtitle {
+    @include font-rules (1.5rem, 400, 120%);
+    margin-bottom: 40px;
+
+    @include for-laptop {
+      margin: 23px 0 22px;
+    }
+
+    @include for-landscape-tablet {
+      @include font-rules (22px, 400, 120%);
+      margin: 20px 0;
+    }
+
+    @include for-phone-landscape {
+      font-size: 20px;
+    }
+    
+    @include for-phone {
+      font-size: 18px;
+      text-align: center;
+      margin: 9px 0 20px -25px;
+    }
+  }
+  
+  &__help-text {
+    line-height: 130%;
+    margin: 11px 198px 60px 0;
+    
+    & > a {
+      color: $dark-cyan-blue-text-color;
+      text-decoration: $orange 2px underline;
+    }
+
+    @include for-laptop {
+      margin: 11px 82px 41px 0;
+    }
+
+    @include for-landscape-tablet {
+      margin: 12px 0 31px 0;
+    }
+
+    @include for-phone {
+      display: none;
+    }
+  }
+  
+  &__text{
+    font-weight: 500;
+
+    @include for-laptop {
+      margin-right: 80px;
+    }
+
+    @include for-landscape-tablet {
+      margin-right: 5px;
+    }
+
+    @include for-phone {
+      display: none;
+    }
+  }
+
+  &__instruction {
+    @include flex-rules (column, center);
+  }
+}
+
+.instruction {
+  &__title {
+    @include font-rules (2.25rem, 400, 130%);
+    text-align: center;
+    padding-bottom: 40px;
+
+    @include for-landscape-tablet {
+      padding-bottom: 20px;
+    }
+
+    @include for-phone-landscape {
+      font-size: 24px;
+    }
+  }
+  
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 130px;
+    margin-bottom: 62px;
+
+    @include for-laptop {
+      margin-bottom: 69px;
+    }
+
+    @include for-landscape-tablet {
+      gap: 50px;
+    }
+
+    @include for-tablet {
+      gap: 36px;
+      margin-bottom: 40px;
+    }
+
+    @include for-phone-landscape {
+      grid-template-columns: 1fr;
+      gap: 30px;
+      margin-bottom: 51px;
+    }
+  }
+  
+  &__steps {
+    display: grid;
+    justify-items: center;
+    gap: 30px;
+
+    @include for-phone-landscape {
+      gap: 0;
+    }
+  }
+  
+  &__block {
+    border: 1px solid $border-orange-color;
+    border-radius: 5px;
+    width: 168px;
+    height: 168px;
+  }
+
+  &__text {
+    width: 168px;
+    height: 46px;
+    line-height: 140%;
+
+    @include for-phone-landscape {
+      padding-top: 10px;
+    }
+  } 
+}
+
+.block__pay {
+  background: $white url('img/pay.svg') no-repeat center;
+  position: relative;
+
+  &:after {
+    @include for-landscape-tablet {
+      content: '';
+      background: url('img/green-arrow-for-640.svg') no-repeat;
+      width: 100px;
+      height: 50px;
+      position: absolute;
+      z-index: 20;
+      top: -10%;
+      left: 81%;
+    }
+
+    @include for-phone-landscape {
+      transform: rotate(84deg);
+      top: 113%;
+      left: 74%;
+    }
+  }
+}
+
+.block__pay-to-zoo {
+  background: $white url('img/zoo.svg') no-repeat center;
+  position: relative;
+
+  &:before {
+    content: '';
+    background: url('img/Vector.svg');
+    width: 69px;
+    height: 35px;
+    position: absolute;
+    top: 61px;
+    right: 199px;
+
+    @include for-landscape-tablet {
+      display: none;
+    }
+  }
+
+  &:after {
+    @include for-landscape-tablet {
+      content: '';
+      background: url('img/green-arrow-for-640.svg') no-repeat;
+      width: 100px;
+      height: 50px;
+      position: absolute;
+      z-index: 20;
+      top: -10%;
+      left: 81%;
+    }
+
+    @include for-phone-landscape {
+      transform: rotate(84deg);
+      top: 113%;
+      left: 74%;
+    }
+  }
+}
+
+.block__animal {
+  background: $white url('img/monkey.svg') no-repeat center;
+  position: relative;
+
+  &:before {
+    content: '';
+    background: url('img/Vector.svg');
+    width: 69px;
+    height: 35.08px;
+    position: absolute;
+    top: 57px;
+    right: 199px;
+
+    @include for-landscape-tablet {
+      display: none;
+    }
+  }
+}
+
+.feedback {
+  background: url('img/feedback-back-flower.svg') no-repeat  110% 126%;
+
+  @include for-laptop {
+    background-size: 29%;
+    background-position: 113.4% 115.8%;
+  }
+
+  @include for-landscape-tablet {
+    background-position: 115.2% 114.9%;
+  }
+
+  @include for-phone-landscape {
+    background: url('img/feedback-back-flower-for-320.svg') no-repeat 100% 106.5%;
+  }
+
+  &__container {
+    @include flex-rules (column, stretch);
+    padding-bottom: 180px;
+
+    @include for-laptop {
+      padding-bottom: 140px;
+    }
+
+    @include for-landscape-tablet {
+      padding-bottom: 54px;
+    }
+
+    @include for-phone-landscape {
+      padding-bottom: 45px;
+    }
+  }
+  
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  
+  &__carousel {
+    margin: auto;
+    @include flex-rules (row, center);
+    transition: transform 0.8s;
+
+    @include for-landscape-tablet {
+      flex-direction: column;
+      
+      & > :nth-child(n+4) {
+        display: none;
+      }
+    }
+  }
+  
+  &__title {
+    @include font-rules (2.25rem, 400, 130%);
+    text-align: center;
+    padding: 139px 0 47px;
+
+    @include for-laptop {
+      padding: 100px 0 31px;
+    }
+
+    @include for-landscape-tablet {
+      padding: 0;
+      margin: 60px 0 30px -4px;
+    }
+
+    @include for-phone-landscape {
+      font-size: 24px;
+      margin: 29px 0 20px -2px;
+    }
+  }
+  
+  &__block {
+    background: $border-orange-gradient-color border-box;
+    border: 2px solid transparent;
+    border-radius: 20px;  
+    width: 268px;
+    height: 391px;
+    margin: 0 28px 0 0;
+    overflow: hidden;
+
+    @include for-laptop {
+      width: 293px;
+    }
+
+    @include for-landscape-tablet {
+      width: 600px;
+      height: 109px;
+      margin: 0 auto 15px;
+    }
+
+    @include for-tablet {
+      width: 600px;
+      height: 109px;
+    }
+
+    @include for-phone-landscape {
+      width: 400px;
+      height: 120px;
+    }
+
+    @include for-phone {
+      width: 299px;
+      height: 109px;
+    }
+  }
+  
+  &__person {
+    @include flex-rules (row, flex-end);
+    padding: 15px 0 11px 16px;
+
+    @include for-laptop {
+      padding: 11px 0 12px 15px;
+    }
+
+    @include for-phone-landscape {
+      padding: 7px 0 11px 10px;
+    }
+  }
+
+  &__text {
+    @include font-rules (0.938rem, 300, 120%);
+    color: $gray-color;
+    padding: 0 15px 19px 16px;
+  }
+
+  &__btn {
+    border-radius: 5px;
+
+    @include for-landscape-tablet {
+      width: 240px;
+      height: 54px;
+      margin: 26px auto;
+    }
+
+    @include for-tablet {
+      margin: 25px auto;
+    }
+
+    @include for-phone-landscape {
+      margin: 14px auto;
+    }
+  }
+
+  &__popup {
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 50;
+    transition: 0.5s;
+    display: none;
+
+    &.open-block {
+      display: flex;
+    }
+  }
+
+  &__scroll {
+    margin: 14px 278px 27px;
+    max-width: 599px;
+
+    @include for-laptop {
+      margin: 12px 268px 47px;
+    }
+
+    @include for-landscape-tablet {
+      display: none;
+    }
+  }
+}
+
+.person {
+  &__photo {
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+  }
+
+  &__info {
+    padding-left: 10px;
+  }
+
+  &__name {
+    color: $black;
+  }
+
+  &__place-date {
+    @include font-rules (0.938rem, 300, 120%);
+    color: $light-gray;
+  }
+}
+
+.scroll__thumb {
+  width: 599px;
+  height: 8px;
+  border: 1px solid transparent;
+  background: $border-thumb-gradient;
+  box-shadow: inset 0 0 0 100vw #f5f7f6;
+  padding-top: 1px;
+  border-radius: 5px;
+  appearance: none;
+  transition: 500ms;
+  cursor: pointer;
+
+  @include for-tablet {
+    display: none;
+  }
+
+  &::-webkit-slider-runnable-track {
+    border-radius: 5px;
+    height: 8px;
+  }
+
+  &::-webkit-slider-thumb {
+    background: $orange;
+    border-radius: 5px;
+    width: 115px;
+    height: 6px;
+    margin-top: 1px;
+    appearance: none;
+
+    @include for-laptop {
+      width: 75px;
+    }
+  }
+
+  &::-moz-range-track {
+    border-radius: 5px;
+    height: 8px;
+  }
+
+  &::-moz-range-thumb {
+    background: $orange;
+    border-radius: 5px;
+    width: 115px;
+    height: 6px;
+    border: none;
+  }
+
+  @include for-laptop {
+    width: 390px;
+  }
+}
+
+.shadow {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.5s;
+  pointer-events: none;
+
+  &_active {
+    opacity: 1;
+  }
+}
+
+.popup {
+  &__close {
+    cursor: pointer;
+  }
+}
