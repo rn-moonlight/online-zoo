@@ -1,0 +1,21 @@
+@mixin flex-rules ($direction, $align-items) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align-items;
+}
+
+@mixin font-rules ($font-size, $font-weight, $line-height) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+@mixin hover-effect ($color, $rule-for-transition) {
+  color: $color;
+  transition: $rule-for-transition;
+}
+
+@mixin hover-back-effect ($background, $rule-for-transition) {
+  background: $background;
+  transition: $rule-for-transition;
+}
