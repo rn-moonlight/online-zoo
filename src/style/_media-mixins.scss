@@ -1,0 +1,41 @@
+/* Big desktop: 1475px and up */
+@mixin for-desktop-up {
+  @media (min-width: 1475px) {
+    @content;
+  }
+}
+
+/* Laptop: 992px - 1475px */
+@mixin for-laptop {
+  @media (max-width: 1475px) {
+    @content;
+  }
+}
+
+/* Landscape tablets: 771px - 991px */
+@mixin for-landscape-tablet {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+
+/* Tablet: 630px - 770px */
+@mixin for-tablet {
+  @media (max-width: 770px) {
+    @content;
+  }
+}
+
+/* Landscape phone: 476px - 630px */
+@mixin for-phone-landscape {
+  @media (max-width: 630px) {
+    @content;
+  }
+}
+
+/* от 0px - 475 px */
+@mixin for-phone {
+  @media (max-width: 475px) {
+    @content;
+  }
+}
