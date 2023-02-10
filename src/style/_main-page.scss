@@ -427,6 +427,11 @@
 
   @include for-landscape-tablet {
     top: 40.8%;
+    left: -3%;
+  }
+
+  @include for-tablet {
+    top: 40.8%;
     left: 37.1%;
   }
 }
@@ -449,6 +454,11 @@
   }
 
   @include for-landscape-tablet {
+    top: 40.8%;
+    right: -3%;
+  }
+
+  @include for-tablet {
     top: 40.8%;
     right: 37.1%;
   }
