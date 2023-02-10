@@ -1,0 +1,283 @@
+.footer {
+  background: $background-footer;
+
+  &__container {
+    padding: 42px 0 39px;
+    display: grid;
+    grid-template-areas:
+      'logo subscribe subscribe'
+      'btn btn btn'
+      'social-sites menu copyright';
+
+    @include for-landscape-tablet {
+      padding: 20px 0 0;
+      grid-template-areas:
+      'logo social-sites'
+      'btn social-sites'
+      'menu copyright';
+    }
+
+    @include for-tablet {
+      padding: 12px 0 0;
+    }
+
+    @include for-phone-landscape {
+      grid-template-areas:
+      'logo'
+      'social-sites'
+      'btn'
+      'copyright'
+      'menu';
+      padding: 21px 0 0;
+    }
+  }
+
+  &__logo {
+    grid-area: logo;
+    border: 0.5px solid $white;
+    padding: 0.55px 4.75px 6.55px;
+    position: relative;
+    
+    &:before {
+      content: '';
+      background: url('img/bamboo-logo.svg') no-repeat center;
+      width: 12px;
+      height: 21px;
+      position: absolute;
+      top: 20px;
+      left: 10px;
+
+      @include for-phone-landscape {
+        top: -3px;
+        left: 233px;
+      }
+
+      @include for-phone {
+        left: 159px;
+      }
+    }
+
+    @include for-phone-landscape {
+      border: none;
+      width: 100%;
+    }
+  }
+
+  &__subscribe {
+    grid-area: subscribe;
+    @include flex-rules (column, flex-end);
+  }
+
+  &__btn {
+    grid-area: btn;
+    margin: 50px 0 51px;
+
+    & > a {
+      padding: 16px 50px;
+      border-radius: 5px;
+    }
+
+    @include for-phone-landscape {
+      margin: 50px auto;
+    }
+
+    @include for-phone {
+      margin: 46px 0px 43px;
+    }
+  }
+
+  &__menu {
+    grid-area: menu;
+    @include flex-rules (row, flex-end);
+    margin-bottom: -9px;
+
+    @include for-tablet {
+      margin-top: 59px;
+    }
+
+    @include for-phone-landscape {
+      margin: 59px auto 0;
+    }
+
+    @include for-phone {
+      margin-top: 28px;
+    }
+  }
+
+  &__copyright {
+    grid-area: copyright;
+    @include flex-rules (column, flex-end);
+    justify-content: flex-end;
+    @include font-rules (1rem, 100, 140%);
+    color: $white;
+    opacity: 0.3;
+    cursor: pointer;
+
+    &_margin {
+      margin: 8px 0 1px;
+    }
+    
+    &:active {
+      color: $active-btn-color;
+      text-decoration: underline $active-btn-color;
+    }
+
+    @include for-phone-landscape {
+      display: flex;
+      align-items: center;
+    }
+
+    @include for-phone {
+      align-items: flex-end;
+    }
+  }
+
+  &__contacts {
+    grid-area: social-sites;
+  }
+}
+
+.subscribe {
+  @include for-laptop {
+    margin-right: 32px;
+  }
+
+  @include for-landscape-tablet {
+    display: none;
+  }
+
+  &__text {
+    @include font-rules (1.5rem, 400, 120%);
+    color: $white;
+    margin-right: 130px;
+    padding-bottom: 14px;
+  }
+  
+  &__input {
+    border: 2px solid $border-orange-color;
+    border-radius: 2px;
+    width: 228px;
+    height: 42px;
+    padding: 10px 7px 10px 10px;
+    background: $background-footer;
+    color: $light-gray;
+  }
+  
+  &__btn {
+    width: 129px;
+    height: 42px;
+    background: $background-submit;
+    border: 1px solid $red;
+    border-radius: 5px;
+    color: $red;
+    margin-left: 7px;
+    cursor: pointer;
+    
+    &:focus {
+      border-color: $black;
+      color: $black;
+    }
+  }
+}
+
+.contacts {
+  display: grid;
+  gap: 13px;
+
+  @include for-tablet {
+    @include flex-rules(column, flex-end);
+    justify-content: center;
+    gap: 20px;
+  }
+
+  @include for-phone-landscape {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  &__item {
+    & > a {
+      line-height: 140%;
+      color: $white;
+      @include flex-rules (row, center);
+  
+      &:hover {
+        @include hover-effect($active-btn-color, color 0.5s ease-in-out);
+        & > div {
+          background-color: $active-btn-color;
+          transition: background-color 0.5s ease-in-out;
+        }
+      }
+  
+      & > div {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.5s ease;
+      }
+  
+      & > p {
+        padding: 1px 0 0 12px;
+  
+        @include for-tablet {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__facebook_logo {
+    background: $background-gray url('img/facebook.svg') no-repeat center;
+  }
+
+  &__twitter_logo {
+    background: $background-gray url('img/twitter.svg') no-repeat center;
+  }
+
+  &__instagram_logo {
+    background: $background-gray url('img/instagram.svg') no-repeat center;
+  }
+
+  &__youtube_logo {
+    background: $background-gray url('img/youtube.svg') no-repeat center;
+  }
+}
+
+.menu {
+  &__points {
+    @include flex-rules (row, flex-end);
+    margin: 0 0 11px 203px;
+    gap: 58px;
+
+    @include for-laptop {
+      gap: 48px;
+      margin: 0 0 10px 137px;
+    }
+
+    @include for-landscape-tablet {
+      margin: 0 0 10px 80px;
+    }
+
+    @include for-tablet {
+      gap: 37px;
+      margin-left: 0;
+    }
+
+    @include for-phone {
+      gap: 31px;
+      margin-left: -2px;
+    }
+  }
+  
+  &__point {
+    & > a {
+      line-height: 140%;
+      color: $white;
+
+      &:hover {
+        @include hover-effect($orange, color 0.5s ease-in-out)
+      }
+    }
+  }
+}

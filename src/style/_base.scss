@@ -1,0 +1,45 @@
+html, 
+.page {
+  min-height: 100vh;
+  font-size: 16px;
+}
+
+.page {
+  font-family: 'Roboto', sans-serif;
+  @include font-rules (16px, 400, 120%);
+  color: $dark-cyan-blue-text-color;
+  
+  > .footer {
+    position: sticky;
+    top: 100vh;
+  }
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+
+  @include for-desktop-up {
+    max-width: 1160px;
+  }
+
+  @include for-laptop {
+    max-width: 940px;
+  }
+
+  @include for-landscape-tablet {
+    max-width: 720px;
+  }
+
+  @include for-tablet {
+    max-width: 600px;
+  }
+
+  @include for-phone-landscape {
+    max-width: 450px;
+  }
+
+  @include for-phone {
+    width: 300px;
+  }
+}
